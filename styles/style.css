@@ -1,0 +1,17 @@
+@tailwind base;
+
+@layer base {
+  img {
+    @apply max-w-max;
+  }
+}
+
+@tailwind components;
+
+@layer components {
+  .maxContainer {
+    @apply container mx-auto;
+  }
+}
+
+@tailwind utilities;

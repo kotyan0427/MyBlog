@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Header } from "./../components/molecules/Header";
+import { Header } from "./../components/organism/Header";
 
 const Index = () => {
   return (

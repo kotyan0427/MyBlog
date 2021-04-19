@@ -630,6 +630,15 @@ img {
   margin-right: auto;
 }
 
+.cardComponent {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  border-radius: 0.5rem;
+  height: 12rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -11172,6 +11181,10 @@ img {
 
 .flex-grow {
   flex-grow: 1;
+}
+
+.flex-grow-flexGrow2 {
+  flex-grow: 2;
 }
 
 .flex-shrink-0 {
@@ -27763,6 +27776,14 @@ img {
   grid-template-columns: none;
 }
 
+.grid-cols-cardGrid {
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+}
+
+.grid-cols-cardResGrid {
+  grid-template-columns: repeat(2,1fr);
+}
+
 .auto-cols-auto {
   grid-auto-columns: auto;
 }
@@ -42453,6 +42474,10 @@ img {
 
   .sm\:flex-grow {
     flex-grow: 1;
+  }
+
+  .sm\:flex-grow-flexGrow2 {
+    flex-grow: 2;
   }
 
   .sm\:flex-shrink-0 {
@@ -59031,6 +59056,14 @@ img {
     grid-template-columns: none;
   }
 
+  .sm\:grid-cols-cardGrid {
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  }
+
+  .sm\:grid-cols-cardResGrid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
   .sm\:auto-cols-auto {
     grid-auto-columns: auto;
   }
@@ -73564,6 +73597,10 @@ img {
 
   .md\:flex-grow {
     flex-grow: 1;
+  }
+
+  .md\:flex-grow-flexGrow2 {
+    flex-grow: 2;
   }
 
   .md\:flex-shrink-0 {
@@ -90142,6 +90179,14 @@ img {
     grid-template-columns: none;
   }
 
+  .md\:grid-cols-cardGrid {
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  }
+
+  .md\:grid-cols-cardResGrid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
   .md\:auto-cols-auto {
     grid-auto-columns: auto;
   }
@@ -104675,6 +104720,10 @@ img {
 
   .lg\:flex-grow {
     flex-grow: 1;
+  }
+
+  .lg\:flex-grow-flexGrow2 {
+    flex-grow: 2;
   }
 
   .lg\:flex-shrink-0 {
@@ -121253,6 +121302,14 @@ img {
     grid-template-columns: none;
   }
 
+  .lg\:grid-cols-cardGrid {
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  }
+
+  .lg\:grid-cols-cardResGrid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
   .lg\:auto-cols-auto {
     grid-auto-columns: auto;
   }
@@ -135786,6 +135843,10 @@ img {
 
   .xl\:flex-grow {
     flex-grow: 1;
+  }
+
+  .xl\:flex-grow-flexGrow2 {
+    flex-grow: 2;
   }
 
   .xl\:flex-shrink-0 {
@@ -152364,6 +152425,14 @@ img {
     grid-template-columns: none;
   }
 
+  .xl\:grid-cols-cardGrid {
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  }
+
+  .xl\:grid-cols-cardResGrid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
   .xl\:auto-cols-auto {
     grid-auto-columns: auto;
   }
@@ -166897,6 +166966,10 @@ img {
 
   .\32xl\:flex-grow {
     flex-grow: 1;
+  }
+
+  .\32xl\:flex-grow-flexGrow2 {
+    flex-grow: 2;
   }
 
   .\32xl\:flex-shrink-0 {
@@ -183473,6 +183546,14 @@ img {
 
   .\32xl\:grid-cols-none {
     grid-template-columns: none;
+  }
+
+  .\32xl\:grid-cols-cardGrid {
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  }
+
+  .\32xl\:grid-cols-cardResGrid {
+    grid-template-columns: repeat(2,1fr);
   }
 
   .\32xl\:auto-cols-auto {

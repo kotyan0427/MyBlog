@@ -12,6 +12,9 @@
   .maxContainer {
     @apply container mx-auto;
   }
+  .cardComponent {
+    @apply bg-white rounded-lg p-2 text-center h-48;
+  }
 }
 
 @tailwind utilities;

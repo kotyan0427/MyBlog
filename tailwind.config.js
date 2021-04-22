@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
@@ -10,6 +12,13 @@ module.exports = {
       flexGrow: {
         flexGrow2: 2,
       },
+      flex: {
+        flex2: 2,
+      },
+    },
+    screens: {
+      phone: "444px",
+      ...defaultTheme.screens,
     },
   },
   variants: {

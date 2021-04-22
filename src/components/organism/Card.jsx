@@ -2,7 +2,7 @@ import { CardList } from "../molecules/CardList";
 
 export const Card = ({ blog }) => {
   return (
-    <main className="flex-grow-flexGrow2">
+    <main className="md:flex-flex2">
       <CardList blog={blog} />
     </main>
   );

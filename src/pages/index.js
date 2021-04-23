@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useFetchData } from "../components/Hooks/useFetchData";
+import { Footer } from "../components/organism/Footer";
 import { SideMenu } from "../components/organism/SideMenu";
 import { Card } from "./../components/organism/Card";
 import { Header } from "./../components/organism/Header";
@@ -11,10 +12,11 @@ const Index = ({ blog }) => {
         <title>とある仙台住みのロッテブログ</title>
       </Head>
       <Header />
-      <div className="px-5 md:flex md:px-5">
+      <div className="mb-6 px-5 md:flex ">
         <Card blog={blog} />
         <SideMenu />
       </div>
+      <Footer />
     </>
   );
 };

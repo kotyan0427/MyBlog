@@ -6,8 +6,8 @@ export const MyProfile = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div>
-      <h1 className="font-semibold text-gray-600 border-b-2 border-green-300 pb-2">プロフィール</h1>
-      <div className="text-center space-y-5 mt-5">
+      <h1 className="asideHeading">プロフィール</h1>
+      <div className="text-center space-y-5 my-5">
         <img
           src="/images/profileImage.jpg"
           alt="プロフィール画像"

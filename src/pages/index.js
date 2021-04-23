@@ -2,8 +2,8 @@ import Head from "next/head";
 import { useFetchData } from "../components/Hooks/useFetchData";
 import { Blog } from "../components/organism/Blog";
 import { Footer } from "../components/organism/Footer";
+import { Header } from "../components/organism/Header";
 import { SideMenu } from "../components/organism/SideMenu";
-import { Header } from "./../components/organism/Header";
 
 const Index = ({ blog }) => {
   return (

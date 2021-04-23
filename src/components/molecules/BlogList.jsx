@@ -1,6 +1,6 @@
 import { Stack } from "@chakra-ui/react";
 
-export const CardList = ({ blog }) => {
+export const BlogList = ({ blog }) => {
   return (
     <ul className=" grid gap-5 grid-cols-cardResGrid  md:pl-0 md:pr-5 lg:grid-cols-3">
       {blog.map((item) => {

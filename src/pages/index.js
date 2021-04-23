@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { useFetchData } from "../components/Hooks/useFetchData";
+import { Blog } from "../components/organism/Blog";
 import { Footer } from "../components/organism/Footer";
 import { SideMenu } from "../components/organism/SideMenu";
-import { Card } from "./../components/organism/Card";
 import { Header } from "./../components/organism/Header";
 
 const Index = ({ blog }) => {
@@ -13,7 +13,7 @@ const Index = ({ blog }) => {
       </Head>
       <Header />
       <div className="mb-6 px-5 md:flex ">
-        <Card blog={blog} />
+        <Blog blog={blog} />
         <SideMenu />
       </div>
       <Footer />

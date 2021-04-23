@@ -1,4 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
+import "@pathofdev/react-tag-input/src/styles/index.scss";
 import "../styles/tailwind.css";
 import theme from "../styles/theme";
 

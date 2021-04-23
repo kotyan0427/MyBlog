@@ -1,10 +1,6 @@
-export const useFetchData = async () => {
-  const key = {
-    headers: {
-      "X-API-KEY": process.env.API_KEY,
-    },
-  };
+import { key } from "./../constants/headersKey";
 
+export const useFetchData = async () => {
   const blogData = await fetch("https://lotteblog.microcms.io/api/v1/myblog", key)
     .then((res) => {
       return res.json();

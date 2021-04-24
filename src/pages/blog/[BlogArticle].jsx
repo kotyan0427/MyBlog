@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Header } from "../../components/organism/Header";
 import { IndividualBlog } from "../../components/organism/IndividualBlog";
+import { UseContextTags } from "../../components/provider/UseContextTags";
 import { key } from "./../../components/constants/headersKey";
 import { useFetchData } from "./../../components/Hooks/useFetchData";
 import { Footer } from "./../../components/organism/Footer";
@@ -8,7 +9,7 @@ import { SideMenu } from "./../../components/organism/SideMenu";
 
 const BlogArticle = ({ individualBlog }) => {
   return (
-    <>
+    <UseContextTags>
       <Head>
         <title>{individualBlog.title}</title>
       </Head>
@@ -18,7 +19,7 @@ const BlogArticle = ({ individualBlog }) => {
         <SideMenu />
       </div>
       <Footer />
-    </>
+    </UseContextTags>
   );
 };
 

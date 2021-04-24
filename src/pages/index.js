@@ -4,10 +4,11 @@ import { Blog } from "../components/organism/Blog";
 import { Footer } from "../components/organism/Footer";
 import { Header } from "../components/organism/Header";
 import { SideMenu } from "../components/organism/SideMenu";
+import { UseContextTags } from "../components/provider/UseContextTags";
 
 const Index = ({ blog }) => {
   return (
-    <>
+    <UseContextTags>
       <Head>
         <title>とある仙台住みのロッテブログ</title>
       </Head>
@@ -17,7 +18,7 @@ const Index = ({ blog }) => {
         <SideMenu />
       </div>
       <Footer />
-    </>
+    </UseContextTags>
   );
 };
 

@@ -1,9 +1,10 @@
 import ReactTagInput from "@pathofdev/react-tag-input";
 import "@pathofdev/react-tag-input/build/index.css";
-import { useState } from "react";
+import React, { useContext } from "react";
+import { TagsContext } from "../provider/UseContextTags";
 
 export const Tags = () => {
-  const [tags, setTags] = useState(["sample", "sample", "sample", "sample"]);
+  const { tags, setTags } = useContext(TagsContext);
 
   return <ReactTagInput tags={tags} onChange={(newTags) => setTags(newTags)} readOnly />;
 };

@@ -1,11 +1,11 @@
 import Head from "next/head";
-import { Header } from "../../components/organism/Header";
-import { IndividualBlog } from "../../components/organism/IndividualBlog";
-import { UseContextTags } from "../../components/provider/UseContextTags";
-import { key } from "./../../components/constants/headersKey";
-import { useFetchData } from "./../../components/Hooks/useFetchData";
-import { Footer } from "./../../components/organism/Footer";
-import { SideMenu } from "./../../components/organism/SideMenu";
+import { key } from "../components/constants/headersKey";
+import { useFetchData } from "../components/Hooks/useFetchData";
+import { Footer } from "../components/organism/Footer";
+import { Header } from "../components/organism/Header";
+import { IndividualBlog } from "../components/organism/IndividualBlog";
+import { SideMenu } from "../components/organism/SideMenu";
+import { UseContextTags } from "../components/provider/UseContextTags";
 
 const BlogArticle = ({ individualBlog }) => {
   return (
@@ -26,7 +26,7 @@ const BlogArticle = ({ individualBlog }) => {
 export const getStaticPaths = async () => {
   const { blogData } = await useFetchData();
   const paths = blogData.contents.map((blog) => {
-    return `/blog/${blog.id}`;
+    return `/${blog.id}`;
   });
   return {
     paths,

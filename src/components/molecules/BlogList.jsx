@@ -6,7 +6,7 @@ export const BlogList = ({ blog }) => {
     <ul className=" grid gap-5 grid-cols-cardResGrid  md:pl-0 md:pr-5 lg:grid-cols-3">
       {blog.map((item) => {
         return (
-          <Link href={`/blog/${item.id}`} key={item.id}>
+          <Link href={`/${item.id}`} key={item.id}>
             <div className="cardComponent duration-500 hover:hoverEffect">
               <Stack spacing={{ base: 1, sm: 2.5 }}>
                 <img className="h-24" src={item.images.url} alt="画像" />

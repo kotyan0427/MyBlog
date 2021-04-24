@@ -12,9 +12,10 @@ const BlogArticle = ({ individualBlog }) => {
     <UseContextTags>
       <Head>
         <title>{individualBlog.title}</title>
+        <link rel="icon" href="/images/android-chrome-36x36.png" />
       </Head>
       <Header />
-      <div className="mb-6 px-5 md:flex ">
+      <div className="mb-6 px-5 md:flex md:items-start">
         <IndividualBlog blog={individualBlog} />
         <SideMenu />
       </div>

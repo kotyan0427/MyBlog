@@ -11,9 +11,10 @@ const Index = ({ blog }) => {
     <UseContextTags>
       <Head>
         <title>とある仙台住みのロッテブログ</title>
+        <link rel="icon" href="/images/android-chrome-36x36.png" />
       </Head>
       <Header />
-      <div className="mb-6 px-5 md:flex ">
+      <div className="mb-6 px-5 md:flex md:items-start">
         <Blog blog={blog} />
         <SideMenu />
       </div>

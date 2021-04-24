@@ -22,7 +22,7 @@ export const MyProfile = () => {
           三度の飯より千葉ロッテ。
         </p>
         <a
-          href="https://twitter.com/home"
+          href="https://twitter.com/kotyanlotte26"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block"

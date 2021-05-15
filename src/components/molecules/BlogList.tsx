@@ -1,10 +1,12 @@
-import { Stack } from "@chakra-ui/react";
-import Link from "next/link";
+import { Stack } from '@chakra-ui/react';
+import Link from 'next/link';
+import { memo, VFC } from 'react';
+import { AllBlogTypes } from '../types/allBlogs';
 
-export const BlogList = ({ blog }) => {
+export const BlogList: VFC<AllBlogTypes> = memo(({ blogData }) => {
   return (
     <ul className=" grid gap-5 grid-cols-cardResGrid  md:pl-0 md:pr-5 lg:grid-cols-3">
-      {blog.map((item) => {
+      {blogData.contents.map((item) => {
         return (
           <Link href={`/${item.id}`} key={item.id}>
             <div className="cardComponent duration-500 hover:hoverEffect">
@@ -23,4 +25,4 @@ export const BlogList = ({ blog }) => {
       })}
     </ul>
   );
-};
+});

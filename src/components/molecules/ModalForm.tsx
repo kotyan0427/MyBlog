@@ -1,4 +1,4 @@
-import { Stack } from "@chakra-ui/layout";
+import { Stack } from '@chakra-ui/layout';
 import {
   Modal,
   ModalBody,
@@ -7,12 +7,18 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-} from "@chakra-ui/modal";
-import { BasicButton } from "../atoms/button/BasicButton";
-import { BasicInput } from "../atoms/input/BasicInput";
-import { BasicTextArea } from "../atoms/input/BasicTextArea";
+} from '@chakra-ui/modal';
+import { VFC } from 'react';
+import { BasicButton } from '../atoms/button/BasicButton';
+import { BasicInput } from '../atoms/input/BasicInput';
+import { BasicTextArea } from '../atoms/input/BasicTextArea';
 
-export const ModalForm = ({ isOpen, onClose }) => {
+type ModalFormProps = {
+  isOpen: boolean;
+  onClose: () => void;
+};
+
+export const ModalForm: VFC<ModalFormProps> = ({ isOpen, onClose }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} autoFocus={false}>
       <ModalOverlay />
@@ -29,7 +35,6 @@ export const ModalForm = ({ isOpen, onClose }) => {
             <BasicTextArea />
           </Stack>
         </ModalBody>
-
         <ModalFooter>
           <BasicButton onClose={onClose}>送信</BasicButton>
         </ModalFooter>

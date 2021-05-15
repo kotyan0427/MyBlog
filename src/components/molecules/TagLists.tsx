@@ -1,6 +1,7 @@
-import { Tags } from "./Tags";
+import { VFC } from 'react';
+import { Tags } from './Tags';
 
-export const TagLists = () => {
+export const TagLists: VFC = () => {
   return (
     <div>
       <h1 className="asideHeading">タグ一覧</h1>

@@ -1,8 +1,9 @@
-import { useDisclosure } from "@chakra-ui/react";
-import { TwitterButton } from "../atoms/button/TwitterButton";
-import { ModalForm } from "./ModalForm.jsx";
+import { useDisclosure } from '@chakra-ui/react';
+import { VFC } from 'react';
+import { TwitterButton } from '../atoms/button/TwitterButton';
+import { ModalForm } from './ModalForm';
 
-export const MyProfile = () => {
+export const MyProfile: VFC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div>

@@ -9,10 +9,6 @@ import { Header } from '../components/organism/Header';
 import { SideMenu } from '../components/organism/SideMenu';
 import { AllBlogTypes } from '../components/types/allBlogs';
 
-const onInput = () => {
-  console.log('テンキーよ、我々を弄ぶのはそこまで楽しいか')
-}
-
 const Index: VFC<AllBlogTypes> = ({ blogData }) => {
   return (
     <RecoilRoot>
@@ -21,7 +17,6 @@ const Index: VFC<AllBlogTypes> = ({ blogData }) => {
         <link rel="icon" href="/images/android-chrome-36x36.png" />
       </Head>
       <Header />
-      <input type="text" inputMode="numeric" onInput={onInput} value='Next.js'/>
       <div className="mb-6 px-5 md:flex md:items-start">
         <Blog blogData={blogData} />
         <SideMenu />

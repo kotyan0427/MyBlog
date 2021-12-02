@@ -22,7 +22,6 @@ const BlogArticle: VFC<BlogInfoTypes> = ({ individualBlog }) => {
       <div className="mb-6 px-5 md:flex md:items-start">
         <IndividualBlog individualBlog={individualBlog} />
         <SideMenu />
-        <input type="text" inputMode='numeric'/>
       </div>
       <Footer />
     </RecoilRoot>

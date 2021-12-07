@@ -12,7 +12,7 @@ export const BlogList: VFC<AllBlogTypes> = memo(({ blogData }) => {
             <div className="cardComponent duration-500 hover:hoverEffect">
               <Stack spacing={{ base: 1, sm: 2.5 }}>
                 <img className="h-24" src={item.images.url} alt="画像" />
-                <p className="font-semibold  text-gray-600 phone:text-center h-12 sm:h-6">
+                <p className="font-semibold text-gray-600 flex justify-center h-12 sm:h-6">
                   {item.title}
                 </p>
                 <p className="text-gray-400 text-right text-xs">

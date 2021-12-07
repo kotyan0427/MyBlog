@@ -17,7 +17,6 @@ module.exports = {
       },
     },
     screens: {
-      phone: "444px",
       ...defaultTheme.screens,
     },
   },

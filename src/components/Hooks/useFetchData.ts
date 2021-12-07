@@ -7,7 +7,6 @@ type UseFetchData = () => Promise<{ blogData: BlogDataTypes }>;
 export const useFetchData: UseFetchData = async () => {
   const blogData: BlogDataTypes = await fetch('https://lotteblog.microcms.io/api/v1/myblog', key)
     .then((res) => {
-      console.log(res);
       return res.json();
     })
     .catch(() => {

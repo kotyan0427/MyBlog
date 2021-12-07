@@ -9,7 +9,6 @@ import { Header } from '../components/organism/Header';
 import { IndividualBlog } from '../components/organism/IndividualBlog';
 import { SideMenu } from '../components/organism/SideMenu';
 import { BlogInfoTypes } from '../components/types/blogs';
-import { IndividualBlogTypes } from '../components/types/individualBlogTypes';
 
 const BlogArticle: VFC<BlogInfoTypes> = ({ individualBlog }) => {
   return (
@@ -33,6 +32,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = blogData!.contents.map((blog) => {
     return `/${blog.id}`;
   });
+
   return {
     paths,
     fallback: 'blocking',
@@ -41,12 +41,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context.params?.BlogArticle;
-  const individualBlog: IndividualBlogTypes | null = await fetch(
-    `https://lotteblog.microcms.io/api/v1/myblog/${id}`,
-    key
-  )
+  const individualBlog = await fetch(`https://lotteblog.microcms.io/api/v1/myblog/${id}`, key)
     .then((res) => res.json())
     .catch(() => null);
+
+  if (!individualBlog) {
+    return {
+      notFound:true
+    }
+  }
 
   return {
     props: {

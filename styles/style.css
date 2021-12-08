@@ -20,6 +20,8 @@
   }
 }
 
+@tailwind utilities;
+
 @variants hover {
   .hoverEffect {
     opacity: 0.7;

@@ -1,9 +1,12 @@
 import React from "react";
+import {SearchInput} from "../atoms/input/SearchInput"
+import {SubmitButton} from "../atoms/button/SubmitButton"
 
 export const SearchField = () => {
   return (
-    <form className='flex justify-center mb-3'>
-      <input type="text" className='w-7/12 max-w-500 border py-1 px-2 focus:outline-none' placeholder='SEARCH'/>
+    <form className="flex flex-col items-center space-y-2 mb-3 surface:flex-row surface:justify-center surface:space-y-0 surface:space-x-2">
+      <SearchInput />
+      <SubmitButton />
     </form>
-  )
+  );
 }

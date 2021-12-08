@@ -16,6 +16,9 @@ module.exports = {
       flex: {
         flex2: 2,
       },
+      maxWidth: {
+        500: "500px",
+      },
     },
     screens: {
       ...defaultTheme.screens,

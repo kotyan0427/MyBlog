@@ -3,7 +3,7 @@ import { VFC } from 'react';
 export const Header: VFC = () => {
   return (
     <>
-      <header className="maxContainer h-24 ">
+      <header className="maxContainer h-16">
         <div className="flex justify-around items-center mt-1 md:text-center md:flex">
           <img
             src="/images/logoName.png"

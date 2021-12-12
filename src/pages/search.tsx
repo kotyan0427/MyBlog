@@ -21,7 +21,7 @@ export const Search: VFC = () => {
   // apiから検索結果の受け取り
   const { data,error } = useSWR<ApiTypes,Error>(["api/search",router.query.keyword],fetcher);
 
-  if (error) return <div>{error}</div>
+  if (error) return <div>failed to load</div>
   if (!data) return (
     <>
       <Header />

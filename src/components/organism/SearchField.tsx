@@ -10,18 +10,23 @@ export const SearchField:VFC = () => {
     const router = useRouter();
 
     // inputのvalue値を取得する関数
-    const onChangeValue = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeValue = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
       setValue(e.target.value);
     }, []);
 
     // 検索ページに遷移する関数
-    const handleClickSubmitButton = useCallback(() => {
-        router.push(`/search/?keyword=${value}`)
-    }, [value, router])
+    const handleClickSubmitButton = useCallback(
+      (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        router.push(`/search/?keyword=${value}`);
+      },
+      [value, router]
+    );
 
     // キーボードをクリックした瞬間に実行される関数
     const handleKeyDown = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
       if (e.key === 'Enter') {
+        e.preventDefault();
         router.push(`/search/?keyword=${value}`)
       }
     }, [value,router]);

@@ -1,7 +1,6 @@
 import { GetStaticProps } from 'next';
 import Head from "next/head";
 import { VFC } from 'react';
-import { RecoilRoot } from 'recoil';
 import { useFetchData } from '../components/Hooks/useFetchData';
 import { Blog } from '../components/organism/Blog';
 import { Header } from '../components/organism/Header';
@@ -12,7 +11,7 @@ import {SearchField}from "./../components/organism/SearchField"
 
 const Index: VFC<AllBlogTypes> = ({ blogData }) => {
   return (
-    <RecoilRoot>
+    <>
       <Head>
         <title>とある仙台住みのロッテブログ</title>
         <link rel="icon" href="/images/android-chrome-36x36.png" />
@@ -24,7 +23,7 @@ const Index: VFC<AllBlogTypes> = ({ blogData }) => {
         <SideMenu />
       </div>
       <Footer />
-    </RecoilRoot>
+    </>
   );
 };
 

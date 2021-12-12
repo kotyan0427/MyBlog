@@ -7,6 +7,7 @@ import { SearchField } from "../components/organism/SearchField";
 import { Blog } from "../components/organism/Blog";
 import { SideMenu } from "../components/organism/SideMenu";
 import { Footer } from "../components/organism/Footer";
+import { Spinner } from "../components/molecules/Spinner";
 import type { ApiTypes } from "../components/types/api";
 
 const fetcher = (url: string, value: string): Promise<ApiTypes> => {
@@ -21,7 +22,13 @@ export const Search: VFC = () => {
   const { data,error } = useSWR<ApiTypes,Error>(["api/search",router.query.keyword],fetcher);
 
   if (error) return <div>{error}</div>
-  if (!data) return <div>loading...</div>
+  if (!data) return (
+    <>
+      <Header />
+      <Spinner />
+      <Footer/>
+    </>
+  )
 
   return (
     <>
